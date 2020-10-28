@@ -1,0 +1,73 @@
+syntax on
+
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" Plugins:
+call plug#begin('~/.vim/plugged')
+
+Plug 'git@github.com:morhetz/gruvbox.git'
+Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'git@github.com:ycm-core/YouCompleteMe.git'
+Plug 'git@github.com:jremmen/vim-ripgrep.git'
+Plug 'tmsvg/pear-tree'
+
+call plug#end()
+
+" Appearance:
+colorscheme gruvbox
+set background=dark
+set guifont=Fira\ Mono:h14
+
+" Space-bar enters 'my command mode'
+let mapleader = " "
+
+" Rip-grep
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
+
+nnoremap <leader>rg :Rg<SPACE>
+
+" file tree:
+let g:netrw_browse_split=4
+let g:netrw_banner=0
+let g:netrw_winsize=25
+
+
+" Allow ycm to detect virtualenv:
+let g:ycm_python_binary_path = 'python'
+
+" Move between windows using hjkl
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+" open file explorer in nice compace side bar
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30 <CR>
+
+" easy close file
+nnoremap <leader>q :q<CR>
+
+" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent>∆ :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent>˚ :set paste<CR>m`O<Esc>``:set nopaste<CR>
+

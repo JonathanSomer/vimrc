@@ -71,3 +71,6 @@ nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
 nnoremap <silent>∆ :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent>˚ :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
+" easy copy to clipboard:
+vnoremap <leader>y "+y<CR>
+nnoremap <leader>Y "+Y<CR>

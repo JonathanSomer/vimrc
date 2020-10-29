@@ -74,3 +74,11 @@ nnoremap <silent>˚ :set paste<CR>m`O<Esc>``:set nopaste<CR>
 " easy copy to clipboard:
 vnoremap <leader>y "+y<CR>
 nnoremap <leader>Y "+Y<CR>
+
+" highlight current lign during insert mode:
+au InsertEnter,InsertLeave * set cul!
+
+" change cursor to line in insert mode:
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"

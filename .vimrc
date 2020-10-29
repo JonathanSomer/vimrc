@@ -26,6 +26,7 @@ Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'git@github.com:ycm-core/YouCompleteMe.git'
 Plug 'git@github.com:jremmen/vim-ripgrep.git'
 Plug 'tmsvg/pear-tree'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
@@ -82,3 +83,6 @@ au InsertEnter,InsertLeave * set cul!
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" undo tree:
+nnoremap <leader>ut :UndotreeToggle<CR>

@@ -86,3 +86,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " undo tree:
 nnoremap <leader>ut :UndotreeToggle<CR>
+
+" backspace over everything:
+set backspace=indent,eol,start

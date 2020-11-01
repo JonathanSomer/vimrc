@@ -43,6 +43,10 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+" goto definition
+nnoremap <leader>gd :YcmCompleter GoTo<CR>
+
+" ripgrep
 nnoremap <leader>rg :Rg<SPACE>
 
 " file tree:

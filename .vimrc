@@ -46,6 +46,9 @@ endif
 " goto definition
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
 
+" disable preview pop-up from YouCompleteMe
+set completeopt-=preview
+
 " ripgrep
 nnoremap <leader>rg :Rg<SPACE>
 

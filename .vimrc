@@ -97,3 +97,6 @@ nnoremap <leader>ut :UndotreeToggle<CR>
 
 " backspace over everything:
 set backspace=indent,eol,start
+
+" python specific
+nnoremap <leader>pdb :let a='import pdb; pdb.set_trace()'\|put=a<CR>

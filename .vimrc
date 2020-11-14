@@ -72,6 +72,7 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30 <CR>
 
 " easy close file
 nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
 
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
 nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>

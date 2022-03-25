@@ -4,7 +4,6 @@
 # install the latest vim:
 brew update
 brew install vim
-exec bash -l
 
 # clone this repo and move .vimrc to home:
 mkdir .vim
